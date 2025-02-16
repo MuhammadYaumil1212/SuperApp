@@ -1,7 +1,11 @@
+import org.jetbrains.kotlin.gradle.model.Kapt
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt.android.gradle.plugin)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -56,4 +60,20 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    //android coroutines
+    implementation(libs.coroutines.android)
+
+    //dagger hilt - for dependency injection
+    implementation(libs.dagger.hilt)
+    implementation(libs.hilt.navigation.compose)
+    kapt(libs.hilt.compiler)
+
+    //android jetpack splashscreen
+    implementation(libs.android.splashscreen)
+
+    //android appcompat
+    implementation(libs.androidx.appcompat)
+
+
 }
