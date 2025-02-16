@@ -1,4 +1,4 @@
-package com.daylab.superapp.ui.theme
+package com.daylab.superapp.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
