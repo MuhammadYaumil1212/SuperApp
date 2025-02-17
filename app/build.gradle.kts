@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.model.Kapt
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -83,6 +81,10 @@ dependencies {
 
     //android appcompat
     implementation(libs.androidx.appcompat)
+
+    //coin image
+    implementation(libs.coil)
+    implementation(libs.coilNetwork)
 
 
 }

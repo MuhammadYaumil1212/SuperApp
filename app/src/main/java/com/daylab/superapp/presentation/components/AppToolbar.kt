@@ -1,13 +1,12 @@
 package com.daylab.superapp.presentation.components
 
 import AppText
-import android.widget.Space
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
@@ -23,13 +22,18 @@ import com.daylab.superapp.R
 
 @Composable
 fun AppToolbar() {
-    Row(modifier = Modifier.fillMaxWidth().padding(16.dp),
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(10.dp)
+            .systemBarsPadding(),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(
             modifier = Modifier.size(40.dp),
             painter = painterResource(id = R.drawable.ic_user),
-            contentDescription = "ic_user")
+            contentDescription = "ic_user"
+        )
 
         Spacer(modifier = Modifier.width(10.dp))
 
@@ -45,7 +49,8 @@ fun AppToolbar() {
         Icon(
             modifier = Modifier.size(40.dp),
             painter = painterResource(id = R.drawable.ic_bell),
-            contentDescription = "ic_bell")
+            contentDescription = "ic_bell"
+        )
     }
 }
 
